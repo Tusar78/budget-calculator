@@ -1,0 +1,90 @@
+/* Add "Playfair Display & Source Sans Pro" fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+
+/* Reset font family */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Main container */
+.custom-container {
+  max-width: 960px;
+  padding: 1rem 1.5rem;
+  background-color: #f0f0ff;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.income {
+  padding-bottom: 1rem;
+}
+
+/* Button design */
+.calculate-btn {
+  padding: 0.625rem 1.875rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: #9c62f9;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.expenses__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+.total-expense,
+.balance {
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+
+.total-expense h3,
+.balance h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.saving-input {
+  border-right: 0;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.percent {
+  display: grid;
+  place-items: center;
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 0 1rem;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  font-size: 1.25rem;
+  border-left: 0;
+}
+
+/* Negative error */
+.negative-error,
+.number-error {
+  width: fit-content;
+  font-weight: 300;
+  padding: 0.1rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: -0.875rem;
+}
+/* Negative error */
+.negative-error {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+/* Number error */
+.number-error {
+  background-color: #f00;
+  color: #fff;
+}
