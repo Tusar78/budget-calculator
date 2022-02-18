@@ -214,7 +214,6 @@ const savingCalculation = () => {
 
   // saving amount display area
   const savingArea = document.getElementById("total-saving");
-  savingArea.innerText = getPercent;
 
   // get balance
   const balanceArea = document.getElementById("balance");
@@ -223,7 +222,19 @@ const savingCalculation = () => {
   // Remaining balance
   const remainingBalance = document.getElementById("remaining-balance");
   const balance = balanceMoney - getPercent;
-  remainingBalance.innerText = balance;
+
+  const moreCostError = document.getElementById('morecost-error-2');
+
+  if (getPercent > balanceMoney) {
+    moreCostError.style.display = "block";
+    moreCostError.classList.add("negative-error");
+    moreCostError.style.marginTop = ".25rem";
+    moreCostError.innerText = `You have not enough money!`;
+  } else {
+    moreCostError.style.display = "none";
+    remainingBalance.innerText = balance;
+    savingArea.innerText = getPercent;
+  }
 };
 
 // Get savings button
